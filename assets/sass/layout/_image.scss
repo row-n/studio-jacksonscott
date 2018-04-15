@@ -1,0 +1,14 @@
+.image {
+  margin-bottom: 2em;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .image__asset {
+    max-width: 100%;
+  }
+}

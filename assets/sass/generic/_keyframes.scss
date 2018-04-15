@@ -1,0 +1,48 @@
+@keyframes scroll-up {
+  0% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  60% {
+    opacity: 0;
+    transform: translate(0, -.5em);
+  }
+
+  80% {
+    opacity: 0;
+    transform: translate(0, .5em);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0;
+    transform: translate(0, -1em);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
