@@ -19,24 +19,26 @@
 
         <section class="content splash">
 
+        <?php
+        // Set up the objects needed
+        $my_wp_query = new WP_Query();
+        $all_wp_pages = $my_wp_query->query(array('post_type' => 'page', 'posts_per_page' => '-1', 'order' => 'DESC'));
+
+        // Get the page as an Object
+        $portfolio =  get_page_by_title('Works');
+
+        // Filter through all pages and find Portfolio's children
+        $portfolio_children = get_page_children( $portfolio->ID, $all_wp_pages );
+
+        if ($portfolio_children) : ?>
+
           <header class="content__header">
             <h1>Works</h1>
           </header>
 
           <div class="thumbnail-list">
 
-            <?php
-            // Set up the objects needed
-            $my_wp_query = new WP_Query();
-            $all_wp_pages = $my_wp_query->query(array('post_type' => 'page', 'posts_per_page' => '-1', 'order' => 'DESC'));
-
-            // Get the page as an Object
-            $portfolio =  get_page_by_title('Works');
-
-            // Filter through all pages and find Portfolio's children
-            $portfolio_children = get_page_children( $portfolio->ID, $all_wp_pages );
-
-            foreach( $portfolio_children as $children ) :
+            <?php foreach( $portfolio_children as $children ) :
               $thumbnail = get_the_post_thumbnail( $children->ID, 'large' );
               if ( $thumbnail ) : ?>
                 <a href="<?php echo get_page_link( $children->ID ); ?>" class="thumbnail">
@@ -55,7 +57,8 @@
 
           </div>
 
-        <?php endwhile; ?>
+        <?php endif;
+      endwhile; ?>
 
       <?php else : ?>
 
