@@ -25,11 +25,9 @@
     z-index: -1;
   }
 
-  .pace-done & {
-    &:hover {
-      &:before {
-        transform: scale(1, 1);
-      }
+  &:hover {
+    &:before {
+      transform: scale(1, 1);
     }
   }
 

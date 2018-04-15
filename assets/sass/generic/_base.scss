@@ -43,7 +43,6 @@ body {
     min-height: calc(100vh - (#{$site-header-height-desktop} + #{$footer-height-desktop}));
   }
 
-  &.pace-running,
   &.menu-open {
     overflow: hidden;
   }
@@ -51,11 +50,6 @@ body {
 
 .main {
   @include clearfix;
-  opacity: 0;
-
-  .pace-done & {
-    opacity: 1;
-  }
 }
 
 .container {
