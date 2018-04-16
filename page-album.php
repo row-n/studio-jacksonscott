@@ -6,9 +6,9 @@
 
   <main class="main">
 
-    <section class="content album">
+    <?php if (have_posts()) : ?>
 
-      <?php if (have_posts()) : ?>
+      <section class="content album">
 
         <?php while (have_posts()) : the_post(); ?>
 
@@ -29,13 +29,13 @@
 
         <?php endwhile; ?>
 
-      <?php else : ?>
+      </section>
 
-        <?php get_template_part('inc/gone'); ?>
+    <?php else : ?>
 
-      <?php endif; ?>
+      <?php get_template_part('inc/gone'); ?>
 
-    </section>
+    <?php endif; ?>
 
   </main>
 

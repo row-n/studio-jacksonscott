@@ -1,5 +1,9 @@
-<div id="post-not-found" <?php post_class(); ?>>
+<section class="content">
 
-  <h2><?php _e('Error 404 &ndash; Page Not Found', 'rob-tucker'); ?></h2>
+  <div id="post-not-found" <?php post_class(); ?>>
 
-</div>
+    <h2><?php _e('Error 404 &ndash; Page Not Found', 'rob-tucker'); ?></h2>
+
+  </div>
+
+</section>
