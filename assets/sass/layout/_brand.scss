@@ -16,6 +16,16 @@
     .menu-open & {
       color: $brand-link-color-active;
     }
+
+    .header--dark & {
+      color: $brand-link-color-active;
+    }
+
+    .header--dark:hover & { // sass-lint:disable-line force-pseudo-nesting
+      .body:not(.menu-open) & { // sass-lint:disable-line force-pseudo-nesting
+        color: $brand-link-color;
+      }
+    }
   }
 
   .brand__description {

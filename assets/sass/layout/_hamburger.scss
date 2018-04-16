@@ -12,10 +12,21 @@
   position: relative;
   text-align: left;
   text-transform: initial;
+  transition: color ($global-duration / 2) $global-timing-function;
   z-index: $hamburger-zindex;
 
   .menu-open & {
     color: $hamburger-link-color-active;
+  }
+
+  .header--dark & {
+    color: $hamburger-link-color-active;
+  }
+
+  .header--dark:hover & { // sass-lint:disable-line force-pseudo-nesting
+    .body:not(.menu-open) & { // sass-lint:disable-line force-pseudo-nesting
+      color: $hamburger-link-color;
+    }
   }
 
   &:hover,
@@ -50,6 +61,16 @@
 
         &.hamburger__line--2 {
           transform: translate3d(0, -.28em, 0) scale(1) rotate(-45deg);
+        }
+      }
+
+      .header--dark & {
+        background-color: $hamburger-link-color-active;
+      }
+
+      .header--dark:hover & { // sass-lint:disable-line force-pseudo-nesting
+        .body:not(.menu-open) & { // sass-lint:disable-line force-pseudo-nesting
+          background-color: $hamburger-link-color;
         }
       }
     }

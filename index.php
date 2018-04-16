@@ -2,9 +2,9 @@
 
 <main class="main">
 
-  <section class="content">
+  <?php if (have_posts()) : ?>
 
-    <?php if (have_posts()) : ?>
+    <section class="content">
 
       <header class="container content__header">
         <h1><?php single_post_title(); ?></h1>
@@ -44,13 +44,13 @@
 
       <?php get_template_part('inc/nav'); ?>
 
-    <?php else : ?>
+    </section>
 
-      <?php get_template_part('inc/gone'); ?>
+  <?php else : ?>
 
-    <?php endif; ?>
+    <?php get_template_part('inc/gone'); ?>
 
-  </section>
+  <?php endif; ?>
 
 </main>
 

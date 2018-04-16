@@ -1,6 +1,6 @@
 {
   "name": "studio-jacksonscott",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Portfolio site for studiojacksonscott.com, built with Wordpress",
   "main": "gulpfile.babel.js",
   "dependencies": {

@@ -18,7 +18,7 @@
   </head>
   <body class="body">
 
-    <header id="header" class="header" role="banner">
+    <header id="header" class="header <?php if( is_home() || is_front_page() ) :?>header--dark<?php endif; ?>" role="banner">
       <div class="header__body">
         <div class="brand">
           <a href="<?php echo home_url('/'); ?>" class="brand__logo"><?php bloginfo('name'); ?><span class="brand__description"><?php bloginfo('description'); ?></span></a>
